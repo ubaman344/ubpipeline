@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>UB Pipeline — LinkedIn Growth for Founders</title>
+
+  <meta
+    name="description"
+    content="Fully managed LinkedIn growth for founders and expert-led businesses."
+  >
+
+  <link rel="icon" href="./public/favicon.svg">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="antialiased">
+
+  <!-- Reusable icons -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width="0"
+    height="0"
+    style="position:absolute;overflow:hidden"
+  >
+    <defs>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="M20 6 9 17l-5-5"></path>
+      </symbol>
+
+      <symbol id="icon-cross" viewBox="0 0 24 24">
+        <path d="M18 6 6 18"></path>
+        <path d="m6 6 12 12"></path>
+      </symbol>
+
+      <symbol id="icon-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="5"></circle>
+        <path d="M20 21a8 8 0 0 0-16 0"></path>
+      </symbol>
+
+      <symbol id="icon-message" viewBox="0 0 24 24">
+        <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
+      </symbol>
+
+      <symbol id="icon-pen" viewBox="0 0 24 24">
+        <path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"></path>
+        <path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"></path>
+        <path d="m2.3 2.3 7.286 7.286"></path>
+        <circle cx="11" cy="11" r="2"></circle>
+      </symbol>
+
+      <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"></circle>
+        <circle cx="12" cy="12" r="6"></circle>
+        <circle cx="12" cy="12" r="2"></circle>
+      </symbol>
+
+      <symbol id="icon-send" viewBox="0 0 24 24">
+        <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+        <path d="m21.854 2.147-10.94 10.939"></path>
+      </symbol>
+
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+        <path d="m9 12 2 2 4-4"></path>
+      </symbol>
+
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+        <path d="M18 17V9"></path>
+        <path d="M13 17V5"></path>
+        <path d="M8 17v-3"></path>
+      </symbol>
+
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <path d="m21 21-4.34-4.34"></path>
+        <circle cx="11" cy="11" r="8"></circle>
+      </symbol>
+
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+      </symbol>
+
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <path d="M8 2v3"></path>
+        <path d="M16 2v3"></path>
+        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+        <path d="M3 9h18"></path>
+        <path d="M8 13h.01"></path>
+        <path d="M12 13h.01"></path>
+        <path d="M16 13h.01"></path>
+        <path d="M8 17h.01"></path>
+        <path d="M12 17h.01"></path>
+        <path d="M16 17h.01"></path>
+      </symbol>
+
+      <symbol id="icon-sparkles" viewBox="0 0 24 24">
+        <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+        <path d="M20 2v4"></path>
+        <path d="M22 4h-4"></path>
+        <circle cx="4" cy="20" r="2"></circle>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main>
+
+    <!-- Navigation -->
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="UB Pipeline home">
+        <span class="brand-word">
+          <span class="brand-prefix">UB</span>
+          <strong>Pipeline</strong>
+        </span>
+      </a>
+
+      <p class="nav-positioning">
+        <svg width="24" height="24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <use href="#icon-sparkles"></use>
+        </svg>
+
+        <span>For founders who are ready to be seen</span>
+
+        <svg width="24" height="24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+          <use href="#icon-sparkles"></use>
+        </svg>
+      </p>
+
+      <a class="header-cta" href="#contact">
+        <span>TALK TO US</span>
+      </a>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <h1>
+          You run the business.
+          <span>We run your LinkedIn.</span>
+        </h1>
+
+        <p class="hero-lead">
+          <span>The right people may already be reading your LinkedIn. We turn their</span>
+          <span>attention into trust, meaningful conversations, and long-term business growth.</span>
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#system">
+            <span>SEE HOW IT WORKS</span>
+          </a>
+
+          <a class="secondary-button" href="#contact">
+            <span>BOOK A STRATEGY CALL</span>
+          </a>
+        </div>
+
+        <ul class="hero-notes" aria-label="Key service benefits">
+          <li>
+            <svg width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <use href="#icon-check"></use>
+            </svg>
+            Human-led, never generic
+          </li>
+
+          <li>
+            <svg width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <use href="#icon-check"></use>
+            </svg>
+            Live in your voice
+          </li>
+
+          <li>
+            <svg width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <use href="#icon-check"></use>
+            </svg>
+            Built for US, UK, GCC &amp; Europe
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+
+        <div
+          class="pipeline-orbit"
+          role="img"
+          aria-label="UB Pipeline connects positioning, content, and outreach to recognition, conversations, pipeline, and revenue growth"
+        >
+          <div class="orbit-ring orbit-ring-outer" aria-hidden="true"></div>
+          <div class="orbit-ring orbit-ring-middle" aria-hidden="true"></div>
+          <div class="orbit-ring orbit-ring-inner" aria-hidden="true"></div>
+          <div class="orbit-sweep" aria-hidden="true"></div>
+
+          <div class="orbit-core" aria-hidden="true">
+            <i></i>
+          </div>
+
+          <div class="orbit-mover orbit-node-mover mover-node-one">
+            <div class="orbit-node">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-user"></use>
+              </svg>
+              <span>Position</span>
+            </div>
+          </div>
+
+          <div class="orbit-mover orbit-node-mover mover-node-two">
+            <div class="orbit-node">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-pen"></use>
+              </svg>
+              <span>Content</span>
+            </div>
+          </div>
+
+          <div class="orbit-mover orbit-node-mover mover-node-three">
+            <div class="orbit-node">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-message"></use>
+              </svg>
+              <span>Outreach</span>
+            </div>
+          </div>
+
+          <div class="orbit-mover orbit-signal-mover mover-signal-one">
+            <span class="orbit-signal"><i></i>Recognition</span>
+          </div>
+
+          <div class="orbit-mover orbit-signal-mover mover-signal-two">
+            <span class="orbit-signal"><i></i>GTM</span>
+          </div>
+
+          <div class="orbit-mover orbit-signal-mover mover-signal-three">
+            <span class="orbit-signal"><i></i>Pipeline created</span>
+          </div>
+
+          <div class="orbit-mover orbit-signal-mover mover-signal-four">
+            <span class="orbit-signal"><i></i>Revenue growth</span>
+          </div>
+
+          <div class="orbit-mover orbit-signal-mover mover-signal-five">
+            <span class="orbit-signal"><i></i>Conversations</span>
+          </div>
+
+          <div class="orbit-mover orbit-signal-mover mover-signal-six">
+            <span class="orbit-signal"><i></i>Trust</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder problem -->
+    <section class="problem-section section-shell">
+      <div class="section-kicker">The founder problem</div>
+
+      <div class="split-heading">
+        <h2>
+          Your expertise is strong.<br>
+          Your LinkedIn should show it.
+        </h2>
+
+        <div>
+          <p>
+            You know your market, your customers, and the value your
+            business creates. But when that expertise stays invisible
+            or appears inconsistently, the right people cannot
+            recognise it, trust it, or remember you.
+          </p>
+
+          <p>
+            Meaningful conversations never begin, pipeline remains
+            unpredictable, and potential revenue quietly passes to
+            more visible competitors.
+          </p>
+        </div>
+      </div>
+
+      <div class="problem-chain"
+           aria-label="How invisible expertise becomes missed revenue">
+        <span><small>01</small><strong>Invisible expertise</strong></span>
+        <div class="problem-connector" aria-hidden="true"></div>
+
+        <span><small>02</small><strong>Weak trust</strong></span>
+        <div class="problem-connector" aria-hidden="true"></div>
+
+        <span><small>03</small><strong>Fewer conversations</strong></span>
+        <div class="problem-connector" aria-hidden="true"></div>
+
+        <span><small>04</small><strong>Unpredictable pipeline</strong></span>
+        <div class="problem-connector" aria-hidden="true"></div>
+
+        <span><small>05</small><strong>Missed revenue</strong></span>
+      </div>
+    </section>
+
+    <!-- UB system -->
+    <section class="system-section" id="system">
+      <div class="section-shell">
+        <div class="section-kicker light">The UB system</div>
+
+        <div class="system-heading">
+          <h2>
+            From expertise to visibility.<br>
+            From visibility to pipeline.
+          </h2>
+
+          <p>
+            We position your profile, publish ideas in your voice,
+            build the right relationships, and turn earned attention
+            into meaningful business conversations.
+          </p>
+        </div>
+
+        <div class="system-grid">
+          <article>
+            <span>01</span>
+
+            <svg width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <use href="#icon-user"></use>
+            </svg>
+
+            <h3>Position</h3>
+            <p>Make your expertise, audience, and value immediately clear.</p>
+
+            <ul>
+              <li>ICP &amp; offer clarity</li>
+              <li>Profile copy</li>
+              <li>Banner &amp; visual direction</li>
+            </ul>
+
+            <strong>Creates clarity</strong>
+          </article>
+
+          <article>
+            <span>02</span>
+
+            <svg width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <use href="#icon-pen"></use>
+            </svg>
+
+            <h3>Publish</h3>
+            <p>
+              Turn your knowledge and point of view into content
+              that sounds like you.
+            </p>
+
+            <ul>
+              <li>Voice capture</li>
+              <li>Writing &amp; design</li>
+              <li>Consistent publishing</li>
+            </ul>
+
+            <strong>Builds authority</strong>
+          </article>
+
+          <article>
+            <span>03</span>
+
+            <svg width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <use href="#icon-message"></use>
+            </svg>
+
+            <h3>Participate</h3>
+            <p>
+              Place your expertise inside the conversations your market
+              already cares about.
+            </p>
+
+            <ul>
+              <li>Thoughtful comments</li>
+              <li>Relevant connections</li>
+              <li>Relationship nurturing</li>
+            </ul>
+
+            <strong>Builds familiarity &amp; trust</strong>
+          </article>
+
+          <article>
+            <span>04</span>
+
+            <svg width="24" height="24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <use href="#icon-target"></use>
+            </svg>
+
+            <h3>Pipeline</h3>
+            <p>
+              Turn earned attention into relevant, human
+              business conversations.
+            </p>
+
+            <ul>
+              <li>Conversation-led DMs</li>
+              <li>Warm follow-ups</li>
+              <li>Opportunity tracking</li>
+            </ul>
+
+            <strong>Creates opportunities</strong>
+          </article>
+        </div>
+
+        <div class="system-flow" aria-label="The UB system journey">
+          <span>Expertise</span><i aria-hidden="true"></i>
+          <span>Visibility</span><i aria-hidden="true"></i>
+          <span>Recognition</span><i aria-hidden="true"></i>
+          <span>Trust</span><i aria-hidden="true"></i>
+          <span>Conversations</span><i aria-hidden="true"></i>
+          <span>Pipeline</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section section-shell" id="services">
+      <div class="section-kicker">Everything handled</div>
+
+      <div class="services-intro">
+        <h2>
+          Not just posting.<br>
+          A complete LinkedIn operation.
+        </h2>
+
+        <p>
+          Daily engagement, personalised DMs, relevant connections,
+          seven posts a week, account safety, and weekly reporting,
+          all handled consistently by one team.
+        </p>
+      </div>
+
+      <div class="service-list">
+        <article>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-message"></use>
+              </svg>
+            </div>
+            <span>100 / day</span>
+          </div>
+
+          <h3>Daily engagement</h3>
+          <ul>
+            <li>100 manual comments every day</li>
+            <li>Industry-curated accounts and conversations</li>
+            <li>No automated or generic replies</li>
+          </ul>
+        </article>
+
+        <article>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-send"></use>
+              </svg>
+            </div>
+            <span>20+ / day</span>
+          </div>
+
+          <h3>DM management</h3>
+          <ul>
+            <li>At least 20 new conversations daily</li>
+            <li>Personalised, context-aware opening messages</li>
+            <li>Replies written in your tone of voice</li>
+          </ul>
+        </article>
+
+        <article>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-user"></use>
+              </svg>
+            </div>
+            <span>Relevant only</span>
+          </div>
+
+          <h3>Connection building</h3>
+          <ul>
+            <li>Weekly invitation capacity managed carefully</li>
+            <li>Often 200 to 250 requests when available</li>
+            <li>Only people relevant to your industry and goals</li>
+          </ul>
+        </article>
+
+        <article>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-pen"></use>
+              </svg>
+            </div>
+            <span>7 / week</span>
+          </div>
+
+          <h3>Content production</h3>
+          <ul>
+            <li>Seven posts every week, weekends included</li>
+            <li>Writing and visual design handled together</li>
+            <li>A content plan shaped around your expertise</li>
+          </ul>
+        </article>
+
+        <article>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-shield"></use>
+              </svg>
+            </div>
+            <span>Human-managed</span>
+          </div>
+
+          <h3>Account safety</h3>
+          <ul>
+            <li>No automation connected to your LinkedIn account</li>
+            <li>All account activity remains human-managed</li>
+            <li>AI limited to off-platform support work</li>
+          </ul>
+        </article>
+
+        <article>
+          <div class="service-card-top">
+            <div class="service-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-chart"></use>
+              </svg>
+            </div>
+            <span>Every week</span>
+          </div>
+
+          <h3>Weekly reporting</h3>
+          <ul>
+            <li>Weekly content and engagement summary</li>
+            <li>Conversation and opportunity insights</li>
+            <li>Clear learnings and next adjustments</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="comparison-section" id="compare">
+      <div class="section-shell">
+        <div class="section-kicker light">Why UB Pipeline</div>
+
+        <h2>
+          How <span>UB Pipeline</span> compares<br>
+          to a social media manager<br>
+          or full-service agency.
+        </h2>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Criteria</th>
+                <th scope="col">UB Pipeline</th>
+                <th scope="col">Social media<br>manager</th>
+                <th scope="col">Full-service<br>agency</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">LinkedIn handled for you</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Monthly content output</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Regular reporting</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">LinkedIn-only specialists</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">100 manual industry comments daily</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">DMs in your tone of voice</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Posts written in your voice</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">No account-connected automation</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">LinkedIn account safety protocols</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Strategic input from LinkedIn specialists</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Live in seven days</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Multi-platform marketing</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Brand and creative strategy</th>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+                <td><span class="comparison-status excluded" role="img" aria-label="Not included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-cross"></use></svg></span></td>
+                <td><span class="comparison-status included" role="img" aria-label="Included"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-check"></use></svg></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why it works -->
+    <section class="why-section">
+      <div class="section-shell">
+        <div class="section-kicker">Why it works</div>
+        <h2 class="why-title">Be recognised before the conversation begins.</h2>
+
+        <div class="why-grid">
+          <article>
+            <div class="why-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-search"></use>
+              </svg>
+            </div>
+
+            <span>01</span>
+            <h3>Recognition</h3>
+            <ul>
+              <li>The right people repeatedly see your name and ideas</li>
+              <li>Your profile clearly communicates who you are</li>
+              <li>Your expertise becomes familiar and memorable</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="why-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-shield"></use>
+              </svg>
+            </div>
+
+            <span>02</span>
+            <h3>Trust</h3>
+            <ul>
+              <li>Consistent insights demonstrate how you think</li>
+              <li>Useful content builds credibility before a call</li>
+              <li>Your founder presence strengthens the business</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="why-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-message"></use>
+              </svg>
+            </div>
+
+            <span>03</span>
+            <h3>Warmer conversations</h3>
+            <ul>
+              <li>Engagement creates context before outreach</li>
+              <li>Messages feel relevant instead of completely cold</li>
+              <li>Conversations develop into business opportunities</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who we are built for -->
+    <section class="fit-section">
+      <div class="section-shell fit-grid">
+        <div class="fit-copy">
+          <div class="section-kicker light">Who we are built for</div>
+          <h2>Founders with something real to say.</h2>
+
+          <p>
+            UB Pipeline is built for experienced professionals turning
+            their expertise into a business, and startup founders
+            building recognition with buyers, investors, partners,
+            and talent.
+          </p>
+        </div>
+
+        <div class="fit-cards">
+          <article>
+            <strong>Experienced professionals turned founders</strong>
+            <p>
+              Deep market experience becoming a consultancy,
+              advisory practice, or specialised service business.
+            </p>
+          </article>
+
+          <article>
+            <strong>Startup and SaaS founders</strong>
+            <p>
+              Building recognition with buyers, investors, partners,
+              future hires, and the wider startup ecosystem.
+            </p>
+          </article>
+
+          <article>
+            <strong>Expert-led service businesses</strong>
+            <p>
+              Strong delivery and expertise already in place, but no
+              consistent founder-led LinkedIn growth channel.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section" id="process">
+      <div class="section-shell">
+        <div class="section-kicker">How it works</div>
+
+        <div class="process-head">
+          <h2>We learn. We build.<br>We run it.</h2>
+          <p>
+            Two focused setup weeks, followed by a consistent
+            operating rhythm built around your voice, approvals,
+            and business goals.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article>
+            <span>Week 1</span>
+            <h3>Learn everything</h3>
+            <ul>
+              <li>Founder interviews and working sessions</li>
+              <li>Offer, audience, strategy, and business context</li>
+              <li>Voice, documentation, past content, and existing LinkedIn presence</li>
+              <li>A structured working hub in Notion and planning sheets</li>
+            </ul>
+          </article>
+
+          <article>
+            <span>Week 2</span>
+            <h3>Build and approve</h3>
+            <ul>
+              <li>Profile picture direction, headline, About section, and banner</li>
+              <li>Content themes, writing approach, and visual system</li>
+              <li>Audience, prospect, and engagement planning</li>
+              <li>Founder review, feedback, and revisions</li>
+            </ul>
+          </article>
+
+          <article>
+            <span>Week 3 onwards</span>
+            <h3>Run and improve</h3>
+            <ul>
+              <li>Seven weekly posts with supporting visuals</li>
+              <li>Daily engagement, relevant connections, and personalised DMs</li>
+              <li>Weekly measurement, reporting, and adjustments</li>
+              <li>A consistent channel built to support pipeline and improve return over time</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section section-shell" id="about">
+      <div class="about-panel">
+        <div class="about-heading">
+          <div class="section-kicker light">A team-led brand</div>
+          <h2>Founder insight.<br>Team execution.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            UB Pipeline is being built as a specialist team,
+            not a personality dependent freelance service.
+          </p>
+
+          <ul>
+            <li>
+              <strong>One connected team</strong>
+              <span>
+                Strategy, writing, design, engagement, and
+                relationship support work together.
+              </span>
+            </li>
+
+            <li>
+              <strong>Built around your voice</strong>
+              <span>
+                We learn how you think and communicate
+                before we represent you.
+              </span>
+            </li>
+
+            <li>
+              <strong>Trust protected at every step</strong>
+              <span>
+                Human-led execution keeps your presence credible
+                while the channel feels fully handled.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section section-shell" id="faq">
+      <div class="section-kicker">Questions founders ask</div>
+
+      <div class="faq-grid">
+        <h2>Clear before<br>we start.</h2>
+
+        <div class="faq-list">
+          <details>
+            <summary>Will the content sound like me?</summary>
+            <p>
+              That is the goal. We begin by learning how you speak,
+              think, disagree, explain, and tell stories. You approve
+              the content until the voice feels unmistakably yours.
+            </p>
+          </details>
+
+          <details>
+            <summary>How involved do I need to be?</summary>
+            <p>
+              Expect a focused onboarding and short recurring input.
+              UB Pipeline handles the day-to-day execution, while
+              you provide the insight only you can provide.
+            </p>
+          </details>
+
+          <details>
+            <summary>Are the comments and DMs automated?</summary>
+            <p>
+              Our positioning is human-led and relevance-first.
+              We do not want your name attached to generic comments,
+              copied outreach, or conversations that damage trust.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you guarantee leads or sales?</summary>
+            <p>
+              We do not promise a fixed number of leads or sales
+              because results also depend on your offer, market,
+              and sales process. What we do commit to is consistent
+              execution: stronger positioning, seven weekly posts,
+              daily relationship building, relevant outreach, and
+              continuous improvement, all designed to create more
+              qualified conversations and a healthier pipeline.
+            </p>
+          </details>
+
+          <details>
+            <summary>What does it cost?</summary>
+            <p>
+              Every engagement is scoped privately around your current
+              LinkedIn presence, target market, publishing needs,
+              and level of relationship management. After reviewing
+              your profile and goals, we recommend a clear scope and
+              fee so you know exactly what UB Pipeline will handle
+              and how the work is designed to support a return.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <div class="section-kicker light">Start the conversation</div>
+
+        <h2>
+          Build a LinkedIn presence<br>
+          that matches your expertise.
+        </h2>
+
+        <p>
+          Start over text or meet on Google Meet. We will look at
+          your profile first, explain what we would change,
+          and recommend the right scope.
+        </p>
+
+        <div class="contact-options" id="contact-details">
+          <a
+            href="https://www.linkedin.com/in/ubaman34/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-user"></use>
+              </svg>
+            </div>
+
+            <div>
+              <strong>Aman Patel</strong>
+              <span>Connect with the founder</span>
+            </div>
+          </a>
+
+          <a href="mailto:ubpipeline@gmail.com">
+            <div class="contact-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-mail"></use>
+              </svg>
+            </div>
+
+            <div>
+              <strong>Email</strong>
+              <span>ubpipeline@gmail.com</span>
+            </div>
+          </a>
+
+          <article>
+            <div class="contact-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <use href="#icon-calendar"></use>
+              </svg>
+            </div>
+
+            <div>
+              <strong>Calendly</strong>
+              <span>Booking link coming soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-word">
+          <span class="brand-prefix">UB</span>
+          <strong>Pipeline</strong>
+        </span>
+      </a>
+
+      <div class="footer-message">
+        <p>Fully managed LinkedIn growth for founders.</p>
+        <span>Remote team serving the US, UK, GCC, and Europe.</span>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
